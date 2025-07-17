@@ -1,0 +1,158 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f1ea;
+    color: #333;
+    line-height: 1.6;
+}
+
+header.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.hero-text h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #666;
+}
+
+.hero-text .stats {
+    margin: 1rem 0;
+    font-style: italic;
+    color: #555;
+}
+
+#show-portfolio {
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border: none;
+    background-color: #e0c18f;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#show-portfolio:hover {
+    background-color: #b99c6d;
+}
+
+section.about,
+section.skills,
+section#portfolio {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section.skills h3,
+section#portfolio h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills-grid img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.skills-grid img:hover {
+    transform: scale(1.2);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gallery img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #e8e2d3;
+    margin-top: 2rem;
+}
+
+footer .social-icons {
+    margin-bottom: 1rem;
+}
+
+footer .social-icons img {
+    width: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Lightbox Modal */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
